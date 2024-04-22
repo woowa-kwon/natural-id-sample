@@ -1,0 +1,1 @@
+CREATE DATABASE natural_id_test;
