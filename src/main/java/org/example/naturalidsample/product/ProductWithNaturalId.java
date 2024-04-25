@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Index;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
@@ -14,7 +15,9 @@ import org.hibernate.annotations.NaturalId;
 
 @Getter
 @Entity
-@Table(name = "product_with_natural_id")
+@Table(name = "product_with_natural_id", indexes = {
+        @Index(name = "product_key", columnList = "product_key", unique = true)
+})
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ProductWithNaturalId {

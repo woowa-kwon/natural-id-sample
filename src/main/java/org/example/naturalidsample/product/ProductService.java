@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class ProductService {
 
-    private static final double DISCOUNT_RATE = 0.5;
+    private static final double DISCOUNT_RATE = 0.8;
 
     private final ProductRepository productRepository;
     private final DiscountProperties discountProperties;
@@ -41,7 +41,7 @@ public class ProductService {
             return price;
 
         }
-        return (int) (price * DISCOUNT_RATE);
+        return price - (int) (price * DISCOUNT_RATE);
     }
 
 }
