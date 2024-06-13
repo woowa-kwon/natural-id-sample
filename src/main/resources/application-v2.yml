@@ -1,0 +1,28 @@
+spring:
+  config:
+    activate.on-profile: beta
+
+natural-id-sample:
+  discount-v2:
+    start-date: 2024-04-30
+    end-date: 2024-04-30
+    keys:
+      - PRODUCT_AAA
+      - PRODUCT_CCC
+      - PRODUCT_EEE
+      - PRODUCT_XXX
+
+---
+spring:
+  config:
+    activate.on-profile: prod
+
+natural-id-sample:
+  discount-v2:
+    start-date: 2024-05-01
+    end-date: 2024-05-10
+    keys:
+      - PRODUCT_AAA
+      - PRODUCT_CCC
+      - PRODUCT_EEE
+      - PRODUCT_XXX

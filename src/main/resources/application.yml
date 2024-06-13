@@ -36,6 +36,11 @@ natural-id-sample:
       - 1
       - 5
       - 7
+    keys:
+      - PRODUCT_AAA
+      - PRODUCT_CCC
+      - PRODUCT_EEE
+      - PRODUCT_XXX
 
 ---
 spring:
@@ -51,3 +56,8 @@ natural-id-sample:
       - 3
       - 5
       - 6
+    keys:
+      - PRODUCT_AAA
+      - PRODUCT_CCC
+      - PRODUCT_EEE
+      - PRODUCT_XXX

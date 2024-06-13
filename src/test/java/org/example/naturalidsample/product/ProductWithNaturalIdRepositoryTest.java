@@ -63,15 +63,24 @@ class ProductWithNaturalIdRepositoryTest {
     }
 
     @Test
+    void findById2() throws Exception {
+        final ProductWithNaturalId productWithNaturalId = productWithNaturalIdRepository.findById(1L).get();
+        productWithNaturalIdRepository.findByNaturalId(productWithNaturalId.getKey()).get();
+    }
+
+    @Test
     void findAll() throws Exception {
         productWithNaturalIdRepository.findAll();
 
         productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY1).get();
         productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY1).get();
+        productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY1).get();
 
         productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY2).get();
         productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY2).get();
+        productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY2).get();
 
+        productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY3).get();
         productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY3).get();
         productWithNaturalIdRepository.findByNaturalId(PRODUCT_KEY3).get();
     }
