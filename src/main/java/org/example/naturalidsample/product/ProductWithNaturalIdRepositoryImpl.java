@@ -1,8 +1,8 @@
 package org.example.naturalidsample.product;
 
-import jakarta.persistence.EntityManager;
 import org.hibernate.Session;
 
+import javax.persistence.EntityManager;
 import java.util.Optional;
 
 public class ProductWithNaturalIdRepositoryImpl implements ProductWithNaturalIdRepositoryCustom {
